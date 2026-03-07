@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>MAZAFAKERS | ФОРМА ЗАЯВКИ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Audiowide&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content-wrapper">
+            <header>
+                <h1 class="glitch">ФОРМА ЗАЯВКИ</h1>
+                <p style="font-size: clamp(0.9rem, 3vw, 1.2rem);">ВСТУПАЙ В КОМАНДУ</p>
+            </header>
+
+            <div class="back-link">
+                <a href="https://ТВОЙ-ОСНОВНОЙ-САЙТ.github.io" target="_blank">НА ГЛАВНУЮ</a>
+            </div>
+
+            <div class="road">
+                <div class="car"></div>
+            </div>
+
+            <!-- Информационный блок про Казань -->
+            <div style="background: rgba(0, 255, 0, 0.1); border: 2px solid var(--neon-green); border-radius: 10px; padding: 20px; margin: 20px 0; text-align: center;">
+                <p style="color: var(--neon-yellow); font-family: 'Press Start 2P', cursive; font-size: 0.8rem; margin-bottom: 15px;">⚡ НАБОР В КОМАНДУ ⚡</p>
+                <p style="color: var(--neon-blue); font-size: 1.2rem; margin-bottom: 10px;">г. КАЗАНЬ</p>
+                <p style="color: var(--neon-pink);">Обязательно иметь водительское удостоверение, личное авто и желательно стаж вождения от 1 года</p>
+                <p style="color: #aaa; margin-top: 20px; font-size: 0.9rem;">Сборы только в Казани и близлежащих окрестностях</p>
+            </div>
+
+            <div class="form-container">
+                <h2>ЗАПОЛНИ АНКЕТУ</h2>
+                <p style="text-align: center; color: var(--neon-pink); margin-bottom: 25px;">Все поля обязательны, бро!</p>
+
+                <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT_HERE" method="POST" enctype="multipart/form-data">
+                    
+                    <!-- Поле: Стаж вождения -->
+                    <div class="form-group">
+                        <label for="experience" class="required">СТАЖ ВОЖДЕНИЯ (ЛЕТ)</label>
+                        <input type="number" id="experience" name="Стаж вождения" required min="0" max="60" placeholder="Сколько лет за рулем?">
+                        <span class="file-hint">🚗 Укажи полных лет стажа</span>
+                    </div>
+
+                    <!-- Поле: Возраст -->
+                    <div class="form-group">
+                        <label for="age" class="required">ВОЗРАСТ</label>
+                        <input type="number" id="age" name="Возраст" required min="16" max="99" placeholder="18">
+                    </div>
+
+                    <!-- Поле: Город/Район Казани -->
+                    <div class="form-group">
+                        <label for="city" class="required">РАЙОН КАЗАНИ ИЛИ ГОРОД</label>
+                        <input type="text" id="city" name="Район/город" required placeholder="Например: Авиастроительный, Зеленодольск, Дербышки...">
+                        <span class="file-hint">📍 Важно: набор только по Казани и близлежащих районов </span>
+                    </div>
+
+                    <!-- Поле: Telegram -->
+                    <div class="form-group">
+                        <label for="telegram" class="required">ТЕЛЕГРАМ (ЮЗЕРНЕЙМ)</label>
+                        <input type="text" id="telegram" name="Telegram" required placeholder="@tvoy_username">
+                    </div>
+
+                    <!-- Поле: Машина -->
+                    <div class="form-group">
+                        <label for="car" class="required">ТВОЙ БОЛИД</label>
+                        <input type="text" id="car" name="Машина" required placeholder="Марка, модель...">
+                    </div>
+
+                    <!-- Поле: Фото машины -->
+                    <div class="form-group">
+                        <label for="photo" class="required">ФОТКА ТАЧКИ</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="photo" name="Фото машины" accept="image/*" required>
+                        </div>
+                        <span class="file-hint">📸 Загрузи одну фотку своего авто (JPEG, PNG)</span>
+                    </div>
+
+                    <!-- Поле: Почему ты? -->
+                    <div class="form-group">
+                        <label for="why" class="required">ПОЧЕМУ ХОЧЕШЬ К НАМ?</label>
+                        <textarea id="why" name="Почему хочет в команду" required placeholder="Напиши пару строк о себе..."></textarea>
+                    </div>
+
+                    <!-- Скрытое поле для антиспама Formspree -->
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <!-- Кнопка отправки -->
+                    <div class="submit-btn">
+                        <button type="submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Второй инфоблок после формы -->
+            <div style="background: rgba(255, 0, 255, 0.1); border: 2px solid var(--neon-pink); border-radius: 10px; padding: 15px; margin: 20px 0;">
+                <p style="color: var(--neon-yellow); text-align: center; font-family: 'Press Start 2P', cursive; font-size: 0.7rem;">
+                    ⚠️ ВНИМАНИЕ ⚠️
+                </p>
+                <p style="color: var(--neon-green); text-align: center; margin-top: 10px;">
+                    Повторюсь, набор открыт только для пацанов из Казани и близлежащих районов<br>
+                    <span style="color: var(--neon-blue);">🚘 После заполнения формы, ожидайте обратную связь в Telegram 🚘</span>
+                </p>
+            </div>
+
+            <div class="road">
+                <div class="car"></div>
+            </div>
+
+            <footer>
+                <p>AvorerInc | <a href="https://ТВОЙ-ОСНОВНОЙ-САЙТ.github.io" target="_blank">Основной сайт</a></p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
